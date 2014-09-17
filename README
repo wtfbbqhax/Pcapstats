@@ -1,0 +1,67 @@
+                           _        _       
+ _ __   ___ __ _ _ __  ___| |_ __ _| |_ ___ 
+| '_ \ / __/ _` | '_ \/ __| __/ _` | __/ __|
+| |_) | (_| (_| | |_) \__ \ || (_| | |_\__ \
+| .__/ \___\__,_| .__/|___/\__\__,_|\__|___/
+|_|             |_|                         
+
+
+## Synopsis
+Pcapstats is a minimal configuration network traffic analyzer.
+
+## Version
+Pcapstats v1.33
+
+## Directories
+doc - design documents
+share - man pages
+etc - configuration files
+src - source code
+tests - test data
+
+## Building
+Pcapstats is built and packaged using the gnu autotools.
+
+If checking out from the git repository first run
+root@localhost $ autoreconf -i
+
+Building the source code
+root@localhost $ ./configure
+root@localhost $ make
+root@localhost $ make install
+
+## Documentation
+To learn more about pcapstats read the provided man page.
+root@localhost $ man pcapstats
+
+## Hardware Requirements
+This has yet to be properly evaluated, here is my sugestion 
+for a SOHO environment
+
+Pentium III 1Ghz
+256Mb Memory
+
+## Software Requirements
+Supported Platforms
+   * Linux
+   * Mac OS X 
+   * OpenBSD
+
+Libraries
+   * libpcap
+
+## History
+pcapstats 0.x.x was a rewrite of a perl script 
+pcapstats 1.0.0 was a rewrite based on snort
+pcapstats 1.1.0 ...
+pcapstats 1.2.0 ...
+pcapstats 1.30 added a ip defragmentation api
+pcapstats 1.40 will be mostly a rewrite
+
+## Contact
+Report Bugs to `bugs@evilsec.org'
+
+## Copyright
+Copyright (C) 2010-2012, Victor J. Roemer.
+Released under The BSD 3-Clause License.
+

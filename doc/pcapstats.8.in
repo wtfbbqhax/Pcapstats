@@ -1,0 +1,87 @@
+.\" 
+.\" pcapstats.8
+.\" Victor Roemer vroemer@evilsec.org
+.\"
+.TH PCAPSTATS 8 "March 28, 2012" "pcapstats @VERSION@" "User Commands"
+
+.SH NAME
+pcapstats \- Traffic analysis and profiling.
+
+.SH SYNOPSIS
+.br
+.B pcapstats
+.RI [\|\c
+.IR -d \||\c
+.IR --daemon \|]
+.B \-i \||\| --interface
+.RI [\|\c
+.IR interface \|]
+.br
+.B pcapstats
+.B \-r \||\| --read
+.RI [\|\c
+.IR pcap \|]
+.br
+
+.B pcapstats
+.B --help
+.br
+.B pcapstats
+.B \-V \||\| --version
+.br
+.B pcapstats
+.B --license
+.br
+
+.SH DESCRIPTION
+.PP
+\fBPcapstats\fP 
+
+.SH OPTIONS
+.\" Interface Reading Option
+.TP
+.BI \-i\  interface ,\ \-\-interface= interface
+Read network traffic from a live interface.
+.\" Pcap Reading Option
+.TP
+.BI \-r\  pcap ,\ \-\-read= pcap
+Read network traffic from a static packet capture.
+.\" Configuration File Option
+.TP
+.BI \-T,\ \-\-config\-test
+Validate the configuration file and exit.
+.\" Configuration File Option
+.TP
+.BI \-c\  file ,\ \-\-config\-file= file
+Use this user configuration file rather than the default of
+.IR /usr/local/etc/pcapstats.conf .
+.\" Daemonize 
+.TP
+.BI \-d,\ \-\-daemon
+Run in the background as a daemon.
+.TP
+.\" Help 
+.BI \-\-help
+.br
+Print a help message and exit.
+.\" Version 
+.TP
+.BI \-V,\ \-\-version
+Display version information and exit.
+.TP
+.\" License 
+.BI \-\-license
+Display license information and exit.
+
+.SH FILES
+.TP
+.IR /usr/local/etc/pcapstats.conf
+
+.SH CONFIGURATION
+.TP
+The syntax of the pcapstats.conf(5) file is discussed separately.
+
+.SH "SEE ALSO"
+.BR netstat(8),
+.BR snort(8)
+

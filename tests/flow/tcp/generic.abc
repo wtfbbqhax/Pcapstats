@@ -1,0 +1,13 @@
+d(stack="eth:ip4:tcp")
+
+a(syn,win=1518)
+b(syn,ack, win=1518)
+a(ack, psh, len=150)
+b(ack, psh, len=300)
+a(fin,ack)
+#b(ack, len=150)
+#a(ack)
+#b(fin,ack)
+#a(ack)
+b(fin,ack)
+a(ack)

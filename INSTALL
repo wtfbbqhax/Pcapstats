@@ -1,0 +1,52 @@
+Installation Instructions for Pcapstats
+=======================================
+
+Pcapstats uses the well-known configure(autotools) infrastructure.
+
+    $ ./configure
+    $ make
+    $ make install
+
+Prerequisites
+=============
+
+    * libpcap (tcpdump.org)
+ 
+    * libpacket (bitbucket.org)
+
+Configuring and compiling
+=========================
+
+./configure [options]
+
+--prefix=
+
+    The   prefix  to   put   all   installed  files   under.   It  defaults   to
+    /usr/local,  so the  binaries  will go  into  /usr/local/bin, manpages  into
+    /usr/local/share/man, etc.
+
+--enable-debug (or --disable-debug)
+
+    Enable or disable debugging options, this is strictly for development usage.
+
+--enable-builtin
+
+    This option causes pcapstats to be  compiled with custom versions of certain
+    system functions.  Note that they  will be used when  they don't exist  on a
+    host system.
+
+Experimental or Unsafe
+======================
+
+--enable-pthreads
+
+    Enable threading support,  this feature is untested and  not recommended for
+    use.
+
+    - This is deamed unsafe because it  will spawn a new thread for each timeout
+      queue created.
+
+    - This will be re-evaluated in the future.
+
+
+

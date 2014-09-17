@@ -1,0 +1,9 @@
+d(stack="eth:ip6:tcp")
+
+a(syn)
+b(syn,ack)
+a(ack, psh, len=150)
+b(ack, psh, len=300)
+a(fin,ack)
+b(fin,ack)
+a(ack)
